@@ -1,12 +1,13 @@
 class BoatsController < ApplicationController
-  before_action :set_boat, only: [:show, :destroy]
+  before_action :boat_params, only: [:create]
+  before_action :set_boat, only: [:show, :edit, :update, :destroy]
 
   def index
     @boats = Boat.all
   end
 
   def show
-    @booking = Booking.new
+    # @boat = Boat.find(params[:id])
   end
 
   def new
@@ -20,6 +21,14 @@ class BoatsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+  end
+
+  def update
+    @boat.update(boat_params)
+    redirect_to boat_path(@boat)
   end
 
   def destroy
