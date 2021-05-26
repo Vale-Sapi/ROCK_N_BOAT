@@ -1,0 +1,19 @@
+<h1>ROCK 'N BOAT</h1>
+<p>Take a boat and rock 'n roll!</p>
+<ul style="list-style: none;">
+<% @boats.each do |boat|%>
+<li><%= link_to boat.name, boat_path(boat) %>
+</li>
+<% end %>
+</ul>
+
+<%= link_to "Add a new boat", new_boat_path %>
+<%= link_to "SignUp or Login", new_boat_path %>
+<!--<% if user_signed_in? %>
+  <% @bookings.each do |booking|%>
+    <% if booking.user == current_user %>
+      <%= booking.start_date %>
+      <%= booking.end_date %>
+    <% end %>
+  <% end %>
+<% end %>-->
