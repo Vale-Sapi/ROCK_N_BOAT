@@ -4,3 +4,5 @@
   <p><%= @boat.location %></p>
   <p><%= @boat.details %></p>
   <p><%= @boat.price %></p>
+  <hr>
+  <p><%= link_to "Book now", new_boat_booking_path(@boat), class: "btn btn-flat" %></p>

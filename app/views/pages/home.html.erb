@@ -82,8 +82,9 @@
     </div>
       <h2 class="card-trip-pricing"> $ <%= boat.price %></h2>
        </div>
+       <%= link_to "", boat_path(boat), class: "card-link" %>
     </div>
-    <%= link_to "", boat_path(boat), class: "card-link" %>
+
     <li><%#= link_to boat.name, boat_path(boat) %></li>
   <% end %>
 </ul>
