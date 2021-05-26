@@ -18,6 +18,3 @@ user = User.new(email: 'ratata@gmail.com', password: '123456')
   )
   boat.save!
 end
-
-# boat = Boat.create(name: Faker::Name.name, location: Faker::Internet.email)
-# boat.save!
