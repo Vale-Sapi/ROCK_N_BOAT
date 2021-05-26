@@ -1,19 +1,100 @@
-<h1>ROCK 'N BOAT</h1>
-<p>Take a boat and rock 'n roll!</p>
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Messages", "#", class: "nav-link" %>
+      </li>
+      <li><%= link_to "Add a new boat", new_boat_path %>
+
+      </li>
+      <li><%= link_to "SignUp/Login", new_boat_path %>
+
+      </li>
+      <li class="nav-item dropdown">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Action", "#", class: "dropdown-item" %>
+          <%= link_to "Another action", "#", class: "dropdown-item" %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(barca2.jpeg);">
+  <div class="container">
+    <h1>Take a boat and rock 'n roll!</h1>
+    <p>The best solution for your yacht charter.</p>
+    <a class="btn btn-flat" href="#">Search</a>
+  </div>
+</div>
+
+
+
 <ul style="list-style: none;">
 <% @boats.each do |boat|%>
 <li><%= link_to boat.name, boat_path(boat) %>
 </li>
 <% end %>
+<<<<<<< HEAD
 <% if user_signed_in? %>
+=======
+</ul>
+
+<!--<% if user_signed_in? %>
+>>>>>>> bc86dca4dd2372ea98d037e79f77f9e4e19814f5
   <% @bookings.each do |booking|%>
     <% if booking.user == current_user %>
       <%= booking.start_date %>
       <%= booking.end_date %>
     <% end %>
   <% end %>
+<<<<<<< HEAD
 <% end %>
 </ul>
 
 <%= link_to "Add a new boat", new_boat_path %>
 <%= link_to "SignUp or Login", new_boat_path %>
+=======
+<% end %>-->
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2>Title here</h2>
+      <p>Short description here!</p>
+    </div>
+    <h2 class="card-trip-pricing">£99.99</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+  </div>
+</div>
+>>>>>>> bc86dca4dd2372ea98d037e79f77f9e4e19814f5
