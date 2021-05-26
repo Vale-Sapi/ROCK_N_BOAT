@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "#", class: "navbar-brand" do %>
   <% end %>
@@ -32,6 +33,9 @@
     </ul>
   </div>
 </div>
+=======
+
+>>>>>>> d0bbc5f0e48c35ed9b08b92f88ad8f24e353eb59
 
 
 
@@ -46,6 +50,7 @@
 
 
 <ul style="list-style: none;">
+<<<<<<< HEAD
 <% @boats.each do |boat|%>
 <li><%= link_to boat.name, boat_path(boat) %>
 </li>
@@ -65,15 +70,42 @@
 
 <div class="card-trip">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+=======
+  <% @boats.each do |boat|%>
+    <div class="card-trip">
+      <img src="https://images.unsplash.com/photo-1560216874-c209251cba8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"/>
+>>>>>>> d0bbc5f0e48c35ed9b08b92f88ad8f24e353eb59
   <div class="card-trip-infos">
     <div>
-      <h2>Title here</h2>
-      <p>Short description here!</p>
+      <h2> <%= boat.name %></h2>
+      <p> <%= boat.details %></p>
     </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-  </div>
-</div>
+      <h2 class="card-trip-pricing"> $ <%= boat.price %></h2>
+       </div>
+    </div>
+    <%= link_to "", boat_path(boat), class: "card-link" %>
+    <li><%#= link_to boat.name, boat_path(boat) %></li>
+  <% end %>
+</ul>
+
+<!--<%# if user_signed_in? %>
+>>>>>>> bc86dca4dd2372ea98d037e79f77f9e4e19814f5
+  <%# @bookings.each do |booking|%>
+    <%# if booking.user == current_user %>
+      <%#= booking.start_date %>
+      <%#= booking.end_date %>
+    <%# end %>
+  <%# end %>
+<<<<<<< HEAD
+<%# end %>
+</ul>
+
+<%#= link_to "Add a new boat", new_boat_path %>
+<%#= link_to "SignUp or Login", new_boat_path %>
+=======
+<%# end %>-->
+
+
 
 <div class="footer">
   <div class="footer-links">
