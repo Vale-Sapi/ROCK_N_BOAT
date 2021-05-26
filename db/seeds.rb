@@ -8,7 +8,7 @@
 require 'faker'
 user = User.new(email: 'ratata@gmail.com', password: '123456')
 
-100.times do
+10.times do
   boat = Boat.new(
     name:    Faker::Name.name,
     location: "#{Faker::Address.street_address}, #{Faker::Address.city}",

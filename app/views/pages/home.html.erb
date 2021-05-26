@@ -1,38 +1,5 @@
 
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-  <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Home", "#", class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Messages", "#", class: "nav-link" %>
-      </li>
-      <li><%= link_to "Add a new boat", new_boat_path %>
-
-      </li>
-      <li><%= link_to "SignUp/Login", new_boat_path %>
-
-      </li>
-      <li class="nav-item dropdown">
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Action", "#", class: "dropdown-item" %>
-          <%= link_to "Another action", "#", class: "dropdown-item" %>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
 
 
 
@@ -47,40 +14,40 @@
 
 
 <ul style="list-style: none;">
-<% @boats.each do |boat|%>
-<li><%= link_to boat.name, boat_path(boat) %>
-</li>
-<% end %>
-</ul>
-
-<!--<% if user_signed_in? %>
->>>>>>> bc86dca4dd2372ea98d037e79f77f9e4e19814f5
-  <% @bookings.each do |booking|%>
-    <% if booking.user == current_user %>
-      <%= booking.start_date %>
-      <%= booking.end_date %>
-    <% end %>
-  <% end %>
-<<<<<<< HEAD
-<% end %>
-</ul>
-
-<%= link_to "Add a new boat", new_boat_path %>
-<%= link_to "SignUp or Login", new_boat_path %>
-=======
-<% end %>-->
-
-<div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <% @boats.each do |boat|%>
+    <div class="card-trip">
+      <img src="https://images.unsplash.com/photo-1560216874-c209251cba8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"/>
   <div class="card-trip-infos">
     <div>
-      <h2>Title here</h2>
-      <p>Short description here!</p>
+      <h2> <%= boat.name %></h2>
+      <p> <%= boat.details %></p>
     </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-  </div>
-</div>
+      <h2 class="card-trip-pricing"> $ <%= boat.price %></h2>
+       </div>
+    </div>
+    <%= link_to "", boat_path(boat), class: "card-link" %>
+    <li><%#= link_to boat.name, boat_path(boat) %></li>
+  <% end %>
+</ul>
+
+<!--<%# if user_signed_in? %>
+>>>>>>> bc86dca4dd2372ea98d037e79f77f9e4e19814f5
+  <%# @bookings.each do |booking|%>
+    <%# if booking.user == current_user %>
+      <%#= booking.start_date %>
+      <%#= booking.end_date %>
+    <%# end %>
+  <%# end %>
+<<<<<<< HEAD
+<%# end %>
+</ul>
+
+<%#= link_to "Add a new boat", new_boat_path %>
+<%#= link_to "SignUp or Login", new_boat_path %>
+=======
+<%# end %>-->
+
+
 
 <div class="footer">
   <div class="footer-links">
