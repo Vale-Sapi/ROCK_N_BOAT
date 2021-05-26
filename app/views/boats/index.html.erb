@@ -1,1 +1,15 @@
-index.html.erb
+<h1>Boats</h1>
+<p>ROCK 'N BOAT</p>
+<ul>
+  <li><%= link_to 'Create a boat offer', new_boat_path, class: 'btn btn-flat' %></li>
+</ul>
+<% @boats.each do |boat| %>
+  <% link_to boat_path(boat), class:'text-decoration-none' do%>
+    <%= boat.name %>
+    <%= boat.location %>
+    <%= boat.details %>
+    <%= boat.price %>
+  <% end %>
+<% end %>
+
+

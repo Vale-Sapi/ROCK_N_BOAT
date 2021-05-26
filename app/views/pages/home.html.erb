@@ -1,2 +1,9 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>ROCK 'N BOAT</h1>
+<p>Take a boat and rock 'n roll!</p>
+<% if user_signed_in? %>
+  <% @bookings.each do |booking|%>
+    <% if booking.user == current_user %>
+      <%= booking.start_date %>
+      <%= booking.end_date %>
+  <% end %>
+<% end %>
