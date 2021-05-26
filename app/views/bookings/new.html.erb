@@ -1,7 +1,7 @@
 <h1>Bookings</h1>
 <p>Please fill out the form</p>
-<%= simple_form_for @boat do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
+<%= simple_form_for [@boat, @booking] do |f| %>
+  <%= f.input :start_date, as: :date %>
+  <%= f.input :end_date, as: :date %>
   <%= f.submit class: 'btn btn-flat' %>
 <% end %>
