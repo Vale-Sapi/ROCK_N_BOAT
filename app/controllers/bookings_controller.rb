@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: :destroy
-  before_action :set_boat, only: [:show, :new, :create]
+  before_action :set_booking, only: [:destroy, :show]
+  before_action :set_boat, only: [:new, :create]
+  before_action :booking_params, only: [:create]
 
   def show
   end
@@ -14,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.user_id = current_user.id
     @booking.boat = @boat
     if @booking.save
-      redirect_to boat_path(@boat)
+      redirect_to booking_path(@booking)
     else
       render :new
     end
