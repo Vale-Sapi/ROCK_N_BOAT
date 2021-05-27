@@ -1,44 +1,3 @@
-
-<<<<<<< HEAD
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-  <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to "Home", "#", class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Messages", "#", class: "nav-link" %>
-      </li>
-      <li><%= link_to "Add a new boat", new_boat_path %>
-
-      </li>
-      <li><%= link_to "SignUp/Login", new_boat_path %>
-
-      </li>
-      <li class="nav-item dropdown">
-
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <%= link_to "Action", "#", class: "dropdown-item" %>
-          <%= link_to "Another action", "#", class: "dropdown-item" %>
-        </div>
-      </li>
-    </ul>
-  </div>
-</div>
-=======
-
->>>>>>> d0bbc5f0e48c35ed9b08b92f88ad8f24e353eb59
-
-
-
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(barca2.jpeg);">
   <div class="container">
     <h1>Take a boat and rock 'n roll!</h1>
@@ -47,76 +6,34 @@
   </div>
 </div>
 
-
-
-<ul style="list-style: none;">
-<<<<<<< HEAD
-<% @boats.each do |boat|%>
-<li><%= link_to boat.name, boat_path(boat) %>
-</li>
-<% end %>
-</ul>
-
-<!--<% if user_signed_in? %>
-  <% @bookings.each do |booking|%>
-    <% if booking.user == current_user %>
-      <%= booking.start_date %>
-      <%= booking.end_date %>
-    <% end %>
-  <% end %>
-<% end %>-->
-
 <!-- Card -->
-
-<div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-=======
-  <% @boats.each do |boat|%>
-    <div class="card-trip">
-      <img src="https://images.unsplash.com/photo-1560216874-c209251cba8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"/>
->>>>>>> d0bbc5f0e48c35ed9b08b92f88ad8f24e353eb59
-  <div class="card-trip-infos">
-    <div>
-      <h2> <%= boat.name %></h2>
-      <p> <%= boat.details %></p>
-    </div>
+<% @boats.each do |boat|%>
+  <div class="card-trip">
+    <img src="https://images.unsplash.com/photo-1560216874-c209251cba8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"/>
+    <div class="card-trip-infos">
+      <div>
+        <h2> <%= boat.name %></h2>
+        <p> <%= boat.details %></p>
+      </div>
       <h2 class="card-trip-pricing"> $ <%= boat.price %></h2>
-       </div>
-       <%= link_to "", boat_path(boat), class: "card-link" %>
     </div>
-
-    <li><%#= link_to boat.name, boat_path(boat) %></li>
-  <% end %>
-</ul>
+    <%= link_to "", boat_path(boat), class: "card-link" %>
+  </div>
+<% end %>
 
 <!--<%# if user_signed_in? %>
->>>>>>> bc86dca4dd2372ea98d037e79f77f9e4e19814f5
   <%# @bookings.each do |booking|%>
     <%# if booking.user == current_user %>
       <%#= booking.start_date %>
       <%#= booking.end_date %>
     <%# end %>
   <%# end %>
-<<<<<<< HEAD
 <%# end %>
-</ul>
 
 <%#= link_to "Add a new boat", new_boat_path %>
 <%#= link_to "SignUp or Login", new_boat_path %>
-=======
 <%# end %>-->
 
 
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-  </div>
-</div>
+
