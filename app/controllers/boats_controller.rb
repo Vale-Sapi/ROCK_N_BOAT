@@ -3,7 +3,11 @@ class BoatsController < ApplicationController
   before_action :set_boat, only: [:show, :edit, :update, :destroy]
 
   def index
-    @boats = Boat.all
+    if params[:query].present?
+      @boats = Boat.where(location: params[:query])
+    else
+      @boats = Boat.all
+    end
   end
 
   def show

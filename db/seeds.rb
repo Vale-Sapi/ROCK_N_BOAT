@@ -9,7 +9,9 @@ require 'faker'
 require "open-uri"
 
 User.destroy_all
+Booking.destroy_all
 Boat.destroy_all
+
 
 user = User.new(email: 'ratata@gmail.com', password: '123456')
 user.save!
@@ -22,7 +24,7 @@ links = ['https://res.cloudinary.com/vale-sapi/image/upload/v1622111484/barca10_
 file = URI.open(links[count])
   boat = Boat.new(
     name: Faker::Name.name,
-    location: "#{Faker::Address.street_address}, #{Faker::Address.city}",
+    location: "#{Faker::Address.city}",
     details: Faker::Quote.famous_last_words,
     price: rand(1000..10000),
     user_id: user.id

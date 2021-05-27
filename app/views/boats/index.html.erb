@@ -1,15 +1,21 @@
 <h1>Boats</h1>
 <p>ROCK 'N BOAT</p>
-<ul>
-  <li><%= link_to 'Create a boat offer', new_boat_path, class: 'btn btn-flat' %></li>
-</ul>
-<% @boats.each do |boat| %>
-  <% link_to boat_path(boat), class:'text-decoration-none' do%>
-    <%= boat.name %>
-    <%= boat.location %>
-    <%= boat.details %>
-    <%= boat.price %>
-  <% end %>
-<% end %>
 
+<% if @boats.first.present? %>
+<% @boats.each do |boat|%>
+  <div class="card-trip">
+    <img src="https://images.unsplash.com/photo-1560216874-c209251cba8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"/>
+    <div class="card-trip-infos">
+      <div>
+        <h2> <%= boat.name %></h2>
+        <p> <%= boat.details %></p>
+      </div>
+      <h2 class="card-trip-pricing"> $ <%= boat.price %></h2>
+    </div>
+    <%= link_to "", boat_path(boat), class: "card-link" %>
+  </div>
+<% end %>
+<% else %>
+  <h3>NO BOATS FOUND AT THIS LOCATION</h3>
+<% end %>
 

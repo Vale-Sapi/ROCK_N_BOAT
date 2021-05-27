@@ -6,6 +6,14 @@
   </div>
 </div>
 
+<%= form_tag boats_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a boat by city"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 <!-- Card -->
 <% @boats.each do |boat|%>
   <div class="card-trip">
