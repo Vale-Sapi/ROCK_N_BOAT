@@ -2,10 +2,6 @@
   <div class="container">
     <h1>Take a boat and rock 'n roll!</h1>
     <p>The best solution for your yacht charter.</p>
-    <a class="btn btn-flat" href="#">Search</a>
-  </div>
-</div>
-
 <%= form_tag boats_path, method: :get do %>
   <%= text_field_tag :query,
     params[:query],
@@ -14,6 +10,10 @@
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
+
+  </div>
+</div>
+
 <!-- Card -->
 <% @boats.each do |boat|%>
   <div class="card-trip">
