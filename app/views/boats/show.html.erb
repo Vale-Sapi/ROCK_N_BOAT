@@ -1,5 +1,8 @@
   <h1>Boat Information</h1>
-  <%= cl_image_tag @boat.photo.key%>
+
+  <% if @boat.photo.attached? %>
+   <%= cl_image_tag @boat.photo.key %>
+  <% end %>
   <h4> <%= @boat.name %></h4>
   <p><%= @boat.location %></p>
   <p><%= @boat.details %></p>
