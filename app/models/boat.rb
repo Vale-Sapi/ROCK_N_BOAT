@@ -1,6 +1,6 @@
 class Boat < ApplicationRecord
   has_many :bookings
-
+  
   belongs_to :user
 
   include PgSearch::Model
@@ -9,4 +9,6 @@ class Boat < ApplicationRecord
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
+  has_one_attached :photo
+
 end

@@ -1,5 +1,5 @@
   <h1>Boat Information</h1>
-  <img style="width: 400px; height: 400px" src="https://images.unsplash.com/photo-1560216874-c209251cba8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80" alt="boat">
+  <%= cl_image_tag boat.photo.key%>
   <h4> <%= @boat.name %></h4>
   <p><%= @boat.location %></p>
   <p><%= @boat.details %></p>
