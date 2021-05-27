@@ -15,7 +15,8 @@
 </div>
 
 <!-- Card -->
-<% @boats.each do |boat|%>
+<div class= "cardcontainer">
+  <% @boats.each do |boat|%>
   <div class="card-trip">
     <% if boat.photo.attached? %>
    <%= cl_image_tag boat.photo.key %>
@@ -25,10 +26,11 @@
         <h2> <%= boat.name %></h2>
         <p> <%= boat.details %></p>
       </div>
-      <h2 class="card-trip-pricing"> $ <%= boat.price %></h2>
+      <h2 class="card-trip-pricing"> € <%= boat.price %></h2>
     </div>
     <%= link_to "", boat_path(boat), class: "card-link" %>
   </div>
+</div>
 <% end %>
 
 <!--<%# if user_signed_in? %>
