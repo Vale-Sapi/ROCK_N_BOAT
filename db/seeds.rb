@@ -8,10 +8,10 @@
 require 'faker'
 require "open-uri"
 
-User.destroy_all
+
 Booking.destroy_all
 Boat.destroy_all
-
+User.destroy_all
 
 user = User.new(email: 'ratata@gmail.com', password: '123456')
 user.save!
