@@ -33,7 +33,11 @@ class BoatsController < ApplicationController
 
   def update
     @boat.update(boat_params)
-    redirect_to boat_path(@boat)
+    if @boat.save
+      redirect_to boat_path(@boat)
+    else
+      render :new
+    end
   end
 
   def destroy
