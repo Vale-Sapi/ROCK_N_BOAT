@@ -4,7 +4,9 @@
 <% if @boats.first.present? %>
 <% @boats.each do |boat|%>
   <div class="card-trip">
-    <img src="https://images.unsplash.com/photo-1560216874-c209251cba8e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"/>
+    <% if boat.photo.attached? %>
+   <%= cl_image_tag boat.photo.key %>
+   <% end %>
     <div class="card-trip-infos">
       <div>
         <h2> <%= boat.name %></h2>
