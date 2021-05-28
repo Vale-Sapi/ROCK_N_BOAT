@@ -1,0 +1,14 @@
+#new_booking{
+  width: 450px;
+
+}
+.booking-button{
+  padding: 8px 16px;
+  background: rgb(41, 112, 53);
+  color: white;
+  border-radius: 4px;
+  font-size: 18px;
+  &:hover{
+    opacity: 0.8;
+  }
+}
