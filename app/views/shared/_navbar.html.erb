@@ -1,15 +1,16 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-hover">
 
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
+<div class="navbar-left">
+  <%= link_to "Rock'n Boat", "#", class: "nav-link" %>
+</div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
     <ul class="navbar-nav mr-auto">
-      <li><%= link_to "Home", root_path, class: "nav-link" %>
-      <li><%= link_to "SignUp", new_user_registration_path, class: "nav-link" %>
+      <li class="nav-item active">
+        <li><%= link_to "Home", root_path, class: "nav-link" %></li>
+      </li>
+      <li><%= link_to "SignUp", new_user_registration_path, class: "nav-link" %> </li>
         <% if user_signed_in? %>
           <li><%= link_to "Log-out", destroy_user_session_path, class: "nav-link", method: :delete %></li>
         <% else %>

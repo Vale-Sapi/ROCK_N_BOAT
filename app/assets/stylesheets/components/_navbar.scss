@@ -10,3 +10,18 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar-hover{
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.navbar-left{
+  list-style: none;
+
+  a {
+
+    color: inherit;
+  }
+}

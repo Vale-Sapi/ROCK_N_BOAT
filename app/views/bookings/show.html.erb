@@ -1,9 +1,6 @@
-<!-- <h1 class="serious-font">Booking Information</h1>
-<p class="serious-font">Starting Date: <%= @booking.start_date %></p>
-<p class="serious-font">End Date: <%= @booking.end_date %></p>
- -->
 <div class="d-flex flex-column justify-content-around height">
-<h1 class="top-margin d-flex justify-content-center">Boat Information</h1>
+<h1 class="top-margin d-flex justify-content-center">Booking Information</h1>
+</div>
 
 <div class="card-boat">
   <% if @booking.boat.photo.attached? %>
@@ -26,8 +23,7 @@
 <hr>
 
 <div class="d-flex justify-content-around">
-  <p class="btn btn-primary"><%= link_to "Book now", new_boat_booking_path(@booking.boat), class: "btn btn-flat" %></p>
-  <p class="btn btn-primary"><%= link_to "Edit boat information", edit_boat_path, class: "btn btn-flat" %></p>
+  <p class="btn btn-primary"><%= link_to "Edit booking information", edit_boat_path, class: "btn btn-flat" %></p>
   <p class="btn btn-primary"> <%= link_to "Delete #{@booking.boat.name}", boat_path(@booking.boat), class: "btn btn-flat",
     method: :delete,
     data: { confirm: "Are you sure?" } %>
