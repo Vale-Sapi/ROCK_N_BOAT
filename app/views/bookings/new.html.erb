@@ -1,7 +1,11 @@
 <h1 class="serious-font">Bookings</h1>
 <p class="serious-font">Please fill out the form</p>
+<div class="container mt-5" > 
+<h1 class="serious-font"> New Booking</h1>
+<p class="serious-font">Please fill out the form</p>
 <%= simple_form_for [@boat, @booking] do |f| %>
   <%= f.input :start_date, as: :date %>
   <%= f.input :end_date, as: :date %>
-  <%= f.submit class: 'btn btn-flat' %>
+  <%= f.submit class: 'booking-button' %>
 <% end %>
+</div>
