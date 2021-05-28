@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
   before_action :booking_params, only: [:create]
 
   def show
+    # @boats = Boat.all
   end
 
   def new
