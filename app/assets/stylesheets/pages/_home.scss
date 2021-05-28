@@ -3,9 +3,30 @@
   position: absolute;
 }
 
-.form-control{
-  width: 50%;
-  border-radius: 10px;
+
+
+.flex-it {
+  display: flex;
+  width:475px
+}
+
+.search-size{
+  flex: 80%;
+  form {
+    width: 100%;
+    input {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+}
+
+.search-button {
+  input {
+    flex: 15% !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+  }
 }
 
 .funky-font {

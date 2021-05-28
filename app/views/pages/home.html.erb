@@ -2,15 +2,20 @@
   <div class="container">
     <h1 class="funky-font">Take a boat and rock 'n roll!</h1>
     <p>The best solution for your yacht charter.</p>
-<%= form_tag boats_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a boat by city"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-
+    <div class="flex-it">
+    <div class="search-size">
+      <%= form_tag boats_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a boat by city"
+      %>
+    </div>
+    <div class="search-button">
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    </div>
+    <% end %>
+    </div>
   </div>
 </div>
 
