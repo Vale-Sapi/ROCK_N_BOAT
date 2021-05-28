@@ -1,15 +1,24 @@
-  <h1>Boat Information</h1>
+  <h1 class="top-margin d-flex justify-content-center">Boat Information</h1>
 
   <% if @boat.photo.attached? %>
+  <div class="d-flex justify-content-center">
    <%= cl_image_tag @boat.photo.key %>
+  </div>
   <% end %>
-  <h4> <%= @boat.name %></h4>
-  <p><%= @boat.location %></p>
-  <p><%= @boat.details %></p>
-  <p><%= @boat.price %></p>
+  <div class="d-flex justify-content-center">
+    <div class="d-flex flex-column">
+  <h4> NAME: <%= @boat.name %></h4>
+  <h4> LOCATION: <%= @boat.location %></h4>
+  <h4> DETAILS: <%= @boat.details %></h4>
+  <h4> PRICE: <%= @boat.price %></h4>
+    </div>
+  </div>
   <hr>
-  <p><%= link_to "Book now", new_boat_booking_path(@boat), class: "btn btn-flat" %></p>
-  <p><%= link_to "Edit boat information", edit_boat_path, class: "btn btn-flat" %></p>
-  <%= link_to "Delete #{@boat.name}", boat_path(@boat),
+  <div class="d-flex justify-content-center">
+  <p class="btn btn-primary"><%= link_to "Book now", new_boat_booking_path(@boat), class: "btn btn-flat" %></p>
+  <p class="btn btn-primary"><%= link_to "Edit boat information", edit_boat_path, class: "btn btn-flat" %></p>
+  <p class="btn btn-primary"> <%= link_to "Delete #{@boat.name}", boat_path(@boat), class: "btn btn-flat",
     method: :delete,
     data: { confirm: "Are you sure?" } %>
+  </p>
+  </div>

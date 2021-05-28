@@ -1,14 +1,39 @@
 // Specific CSS for your home-page
+.notice{
+  position: absolute;
+}
+
+.form-control{
+  width: 50%;
+  border-radius: 10px;
+}
+
+.funky-font {
+  font-family: 'Sigmar One', cursive;
+}
+
+.serious-font {
+  font-family: 'Libre Baskerville', serif;
+}
+
 .cardcontainer{
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  margin-top: 30px;
+  width: 95%;
+}
+
+.card-trip-text{
+  width: 60%;
 }
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
-  width: 30%;
+  border-radius: 10px;
 }
 .card-link {
   position: absolute;
@@ -19,7 +44,7 @@
 }
 .card-trip > img {
   height: 200px;
-  width: 30vw;
+  width: 100%;
   object-fit: cover;
 }
 .card-trip h2 {
@@ -38,10 +63,15 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  font-family: 'Libre Baskerville', serif;
 }
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.content-wrapper {
+  min-height: calc(100vh - 56px);
 }

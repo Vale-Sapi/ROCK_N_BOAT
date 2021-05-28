@@ -1,6 +1,6 @@
 <div class="banner">
   <div class="container">
-    <h1>Take a boat and rock 'n roll!</h1>
+    <h1 class="funky-font">Take a boat and rock 'n roll!</h1>
     <p>The best solution for your yacht charter.</p>
 <%= form_tag boats_path, method: :get do %>
   <%= text_field_tag :query,
@@ -15,23 +15,25 @@
 </div>
 
 <!-- Card -->
-<div class= "cardcontainer">
+<div class="container">
+  <div class= "cardcontainer">
   <% @boats.each do |boat|%>
   <div class="card-trip">
     <% if boat.photo.attached? %>
    <%= cl_image_tag boat.photo.key %>
    <% end %>
     <div class="card-trip-infos">
-      <div>
+      <div class="card-trip-text">
         <h2> <%= boat.name %></h2>
         <p> <%= boat.details %></p>
       </div>
-      <h2 class="card-trip-pricing"> € <%= boat.price %></h2>
+      <h2 class="card-trip-pricing">€ <%= boat.price %></h2>
     </div>
     <%= link_to "", boat_path(boat), class: "card-link" %>
   </div>
+  <% end %>
+  </div>
 </div>
-<% end %>
 
 <!--<%# if user_signed_in? %>
   <%# @bookings.each do |booking|%>
