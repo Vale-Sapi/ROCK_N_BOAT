@@ -4,3 +4,8 @@
 @import "show";
 @import "new";
 
+.cardcontainer-index{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
