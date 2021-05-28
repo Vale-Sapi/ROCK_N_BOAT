@@ -4,7 +4,13 @@
   border-radius: 10px;
 }
 
+.funky-font {
+  font-family: 'Sigmar One', cursive;
+}
 
+.serious-font {
+  font-family: 'Libre Baskerville', serif;
+}
 
 .cardcontainer{
   display: grid;
@@ -53,10 +59,15 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  font-family: 'Libre Baskerville', serif;
 }
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.content-wrapper {
+  min-height: calc(100vh - 56px);
 }

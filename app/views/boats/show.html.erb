@@ -1,12 +1,12 @@
-  <h1>Boat Information</h1>
+  <h1 class="serious-font">Boat Information</h1>
 
   <% if @boat.photo.attached? %>
    <%= cl_image_tag @boat.photo.key %>
   <% end %>
-  <h4> <%= @boat.name %></h4>
-  <p><%= @boat.location %></p>
-  <p><%= @boat.details %></p>
-  <p><%= @boat.price %></p>
+  <h4 class="serious-font"> <%= @boat.name %></h4>
+  <p class="serious-font"><%= @boat.location %></p>
+  <p class="serious-font"><%= @boat.details %></p>
+  <p class="serious-font"><%= @boat.price %></p>
   <hr>
   <p><%= link_to "Book now", new_boat_booking_path(@boat), class: "btn btn-flat" %></p>
   <p><%= link_to "Edit boat information", edit_boat_path, class: "btn btn-flat" %></p>
